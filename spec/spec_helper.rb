@@ -1,4 +1,23 @@
-# frozen_string_literal: true
+require 'simplecov'
+require 'ffaker'
+require 'pry'
+require 'zeitwerk'
+
+SimpleCov.profiles.define 'ruby' do
+  add_filter '/spec/'
+
+  add_group 'Db', '/db/'
+  add_group 'Models', '/models/'
+  add_group 'Lib', '/lib/'
+end
+
+loader = Zeitwerk::Loader.new
+loader.push_dir('db')
+loader.push_dir('lib')
+loader.push_dir('models')
+loader.setup
+
+SimpleCov.start 'ruby'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

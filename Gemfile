@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 
 ruby(File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip)
 
+gem 'zeitwerk', '~> 2.4'
+
 group :development, :test do
   gem 'ffaker', '~> 2.18'
   gem 'pry', '~> 0.13'
