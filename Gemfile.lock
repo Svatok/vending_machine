@@ -64,6 +64,7 @@ GEM
     simplecov_json_formatter (0.1.3)
     thor (1.1.0)
     unicode-display_width (1.7.0)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
@@ -78,6 +79,7 @@ DEPENDENCIES
   rubocop (~> 0.93)
   rubocop-rspec (~> 1.43)
   simplecov (~> 0.21)
+  zeitwerk (~> 2.4)
 
 RUBY VERSION
    ruby 2.7.2p137

@@ -1,0 +1,30 @@
+---
+products:
+- name: Coca Cola
+  price: 2
+  quantity: 2
+- name: Sprite
+  price: 2.5
+  quantity: 2
+- name: Fanta
+  price: 2.7
+  quantity: 3
+- name: Orange Juice
+  price: 3
+  quantity: 1
+- name: Water
+  price: 3.25
+  quantity: 0
+coins:
+- value: 5.00
+  quantity: 5
+- value: 3.00
+  quantity: 5
+- value: 2.00
+  quantity: 5
+- value: 1.00
+  quantity: 5
+- value: 0.50
+  quantity: 5
+- value: 0.25
+  quantity: 5
