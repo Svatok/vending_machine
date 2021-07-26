@@ -5,7 +5,7 @@ RSpec.describe Console do
     subject { described_class.new }
 
     it 'run data loader' do
-      expect(DataLoader).to receive(:load)
+      expect(DataLoader).to receive(:load).and_call_original
       subject
     end
 

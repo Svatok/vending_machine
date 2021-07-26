@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 
 ruby(File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip)
 
+gem 'i18n', '~> 1.8'
+gem 'terminal-table', '~> 3.0'
 gem 'zeitwerk', '~> 2.4'
 
 group :development, :test do

@@ -1,15 +1,6 @@
 # frozen_string_literal: true
 
-require 'irb'
-require 'zeitwerk'
-require 'pry'
+require './config/initialization'
 
-loader = Zeitwerk::Loader.new
-loader.push_dir('db')
-loader.push_dir('lib')
-loader.push_dir('models')
-loader.setup
-
-Console.run
-
-IRB.start
+console = Console.new
+console.start

@@ -8,4 +8,12 @@ class Product
     @price = attributes[:price]
     @quantity = attributes[:quantity]
   end
+
+  def attributes
+    {
+      name: name,
+      price: price,
+      quantity: quantity
+    }
+  end
 end
