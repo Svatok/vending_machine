@@ -2,10 +2,10 @@
 
 class Console
   ACTIONS = {
-    '1' => proc { |instance| instance.show_products },
-    '2' => proc { |instance| instance.select_product },
-    '3' => proc { |instance| instance.add_coin },
-    '4' => proc { |instance| instance.show_balance },
+    '1' => proc(&:show_products),
+    '2' => proc(&:select_product),
+    '3' => proc(&:add_coin),
+    '4' => proc(&:show_balance),
     '5' => proc { raise SystemExit }
   }.freeze
 
