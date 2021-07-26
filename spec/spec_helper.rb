@@ -1,7 +1,6 @@
 require 'simplecov'
 require 'ffaker'
-require 'pry'
-require 'zeitwerk'
+require './config/initialization'
 
 SimpleCov.profiles.define 'ruby' do
   add_filter '/spec/'
@@ -10,12 +9,6 @@ SimpleCov.profiles.define 'ruby' do
   add_group 'Models', '/models/'
   add_group 'Lib', '/lib/'
 end
-
-loader = Zeitwerk::Loader.new
-loader.push_dir('db')
-loader.push_dir('lib')
-loader.push_dir('models')
-loader.setup
 
 SimpleCov.start 'ruby'
 
@@ -29,3 +22,5 @@ RSpec.configure do |config|
   end
   config.shared_context_metadata_behavior = :apply_to_host_groups
 end
+
+RSpec::Matchers.define_negated_matcher :not_change, :change
